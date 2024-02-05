@@ -1,0 +1,26 @@
+[project]
+name = "terraform-http-backend-test"
+requires-python = "^3.11"
+
+[tool.poetry.scripts]
+tf-httpd = ":main"
+
+[tool.poetry]
+name = "terraform-http-backend-test"
+version = "0.1.0"
+description = "Setup a terraform http backend and possibly mint certs and provider block"
+authors = ["Shawn Wilson <srwilson@ioswitch.dev>"]
+license = "GPLv3"
+readme = "README.md"
+repository = "https://github.com/ag4ve/terraform-http-backend-test"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyopenssl = "^24.0.0"
+pathlib = "^1.0.1"
+datetime = "^5.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
