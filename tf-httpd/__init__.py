@@ -159,7 +159,7 @@ def tf_file(file, proto, ip, port, cert, client_cert, client_priv):
     fd.write(out.join("\n"))
     fd.close()
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="Terraform http backend example server")
     parser.add_argument("ip", nargs='?', default="127.0.0.1", type=ip_address, help="IP address to bind server to")
     parser.add_argument("port", nargs='?', default="8888", type=int, help="Port to bind server to")
@@ -174,3 +174,6 @@ if __name__ == "__main__":
         sys.exit(1)
 
     run(args.ip, args.port, args.cert, args.priv, args.passwd)
+
+if __name__ == "__main__":
+    main()

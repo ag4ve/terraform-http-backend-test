@@ -1,24 +1,26 @@
 [project]
-name = "terraform-http-backend-test"
+name = "tf-httpd"
 requires-python = "^3.11"
 
 [tool.poetry.scripts]
-tf-httpd = ":main"
+tf-httpd = "tf-httpd:main"
 
 [tool.poetry]
-name = "terraform-http-backend-test"
+name = "tf-httpd"
 version = "0.1.0"
 description = "Setup a terraform http backend and possibly mint certs and provider block"
 authors = ["Shawn Wilson <srwilson@ioswitch.dev>"]
 license = "GPLv3"
 readme = "README.md"
 repository = "https://github.com/ag4ve/terraform-http-backend-test"
+packages = [{include = "tf-httpd"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 pyopenssl = "^24.0.0"
 pathlib = "^1.0.1"
 datetime = "^5.4"
+python-magic = "^0.4.27"
 
 
 [build-system]
